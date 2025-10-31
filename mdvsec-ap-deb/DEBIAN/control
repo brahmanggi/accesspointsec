@@ -1,0 +1,25 @@
+Package: mdvsec-ap
+Version: 1.4.0
+Section: net
+Priority: optional
+Architecture: all
+Depends: bash (>= 4.0), hostapd, dnsmasq, iproute2, iptables, openssl, iw, lsb-release, isc-dhcp-client | dhcpcd5
+Recommends: wireguard, cloudflared, suricata, speedtest-cli, snmpd, curl
+Suggests: iptables-persistent, netfilter-persistent
+Maintainer: MDVSEC Team <admin@mdvsec.local>
+Homepage: https://github.com/mdvsec/secure-ap
+Description: MDVSEC Secure Access Point Management Tool
+ A comprehensive WiFi Access Point management tool with advanced security
+ features including:
+ .
+ - Easy WiFi AP setup with multiple frequency support (2.4GHz/5GHz/6GHz)
+ - DNS over HTTPS (DoH) via Cloudflared
+ - WireGuard VPN integration
+ - Suricata IDS/IPS for threat detection
+ - WAN failover with automatic interface switching
+ - Telegram notifications for client connections and threats
+ - SNMP monitoring support
+ - Multi-architecture support (x86, x64, ARM/ARM64)
+ .
+ Compatible with Ubuntu, Debian, Raspberry Pi OS, and other Debian derivatives.
+ Supports x86, x64, and ARM/ARM64 (Raspberry Pi) architectures.

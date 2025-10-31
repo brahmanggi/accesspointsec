@@ -1,0 +1,60 @@
+#!/bin/bash
+set -e
+
+# Colors for output
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+case "$1" in
+    configure)
+        echo -e "${BLUE}========================================${NC}"
+        echo -e "${GREEN}MDVSEC Secure Access Point${NC}"
+        echo -e "${BLUE}========================================${NC}"
+        echo ""
+        echo -e "${GREEN}✓${NC} Package installed successfully!"
+        echo ""
+
+        # Make the script executable
+        chmod +x /usr/local/bin/mdvsec-ap
+
+        # Create configuration directory if it doesn't exist
+        if [ ! -d "/etc/secure-ap" ]; then
+            mkdir -p /etc/secure-ap
+            chmod 755 /etc/secure-ap
+        fi
+
+        echo -e "${BLUE}Installation Information:${NC}"
+        echo "  • Main script: /usr/local/bin/mdvsec-ap"
+        echo "  • Config directory: /etc/secure-ap"
+        echo "  • Architecture: $(dpkg --print-architecture)"
+        echo ""
+        echo -e "${YELLOW}Getting Started:${NC}"
+        echo "  1. Run as root: sudo mdvsec-ap"
+        echo "  2. Or directly: sudo /usr/local/bin/mdvsec-ap"
+        echo ""
+        echo -e "${YELLOW}Quick Start:${NC}"
+        echo "  The script provides an interactive menu for:"
+        echo "  • WiFi Access Point setup (2.4GHz/5GHz/6GHz)"
+        echo "  • DNS over HTTPS (DoH) configuration"
+        echo "  • WireGuard VPN integration"
+        echo "  • Suricata IDS/IPS setup"
+        echo "  • WAN failover configuration"
+        echo "  • Telegram notifications"
+        echo "  • SNMP monitoring"
+        echo ""
+        echo -e "${GREEN}Ready to use!${NC} Run: ${BLUE}sudo mdvsec-ap${NC}"
+        echo ""
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

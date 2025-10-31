@@ -1,0 +1,110 @@
+═══════════════════════════════════════════════════════════════════
+ MDVSEC Secure Access Point - Quick Installation Guide
+═══════════════════════════════════════════════════════════════════
+
+📦 Package: mdvsec-ap_1.4.0_all.deb
+🏗️  Architecture: Universal (x86, x64, ARM, ARM64)
+
+═══════════════════════════════════════════════════════════════════
+ INSTALLATION
+═══════════════════════════════════════════════════════════════════
+
+Option 1: Using apt (Recommended)
+──────────────────────────────────
+This automatically handles dependencies:
+
+    sudo apt install ./dist/mdvsec-ap_1.4.0_all.deb
+
+Option 2: Using dpkg
+────────────────────
+Install manually then resolve dependencies:
+
+    sudo dpkg -i dist/mdvsec-ap_1.4.0_all.deb
+    sudo apt-get install -f
+
+═══════════════════════════════════════════════════════════════════
+ RUNNING THE PROGRAM
+═══════════════════════════════════════════════════════════════════
+
+After installation:
+
+    sudo mdvsec-ap
+
+The program will display an interactive menu with options for:
+  • Quick Start (automated setup)
+  • WiFi Setup
+  • Security Settings (DoH, VPN, IDS/IPS)
+  • Admin Menu (monitoring, management)
+
+═══════════════════════════════════════════════════════════════════
+ SUPPORTED SYSTEMS
+═══════════════════════════════════════════════════════════════════
+
+✅ Debian 10, 11, 12+ (all architectures)
+✅ Ubuntu 18.04, 20.04, 22.04, 24.04+ (all architectures)
+✅ Raspberry Pi OS (Raspbian) - ARM/ARM64
+✅ Linux Mint 19+
+✅ Pop!_OS 20.04+
+✅ Elementary OS 6+
+✅ Any Debian-based distribution
+
+═══════════════════════════════════════════════════════════════════
+ BUILDING FROM SOURCE
+═══════════════════════════════════════════════════════════════════
+
+To build the package yourself:
+
+1. Install build dependencies:
+    sudo apt install dpkg-dev
+
+2. Run the build script:
+    ./build-deb.sh
+
+3. Package will be created in dist/ directory
+
+═══════════════════════════════════════════════════════════════════
+ UNINSTALLATION
+═══════════════════════════════════════════════════════════════════
+
+Remove package (keep configuration):
+    sudo apt remove mdvsec-ap
+
+Remove package and all configuration:
+    sudo apt purge mdvsec-ap
+
+═══════════════════════════════════════════════════════════════════
+ PACKAGE CONTENTS
+═══════════════════════════════════════════════════════════════════
+
+Installed files:
+  • /usr/local/bin/mdvsec-ap (main executable)
+  • /etc/secure-ap/ (configuration directory)
+  • /usr/share/doc/mdvsec-ap/ (documentation)
+
+Runtime files (created by script):
+  • /usr/local/bin/mdvsec-notify
+  • /usr/local/bin/mdvsec-monitor-clients
+  • /usr/local/bin/mdvsec-wan-failover.sh
+  • /etc/systemd/system/mdvsec-*.service
+
+═══════════════════════════════════════════════════════════════════
+ FEATURES
+═══════════════════════════════════════════════════════════════════
+
+🚀 Easy WiFi AP Setup - 2.4GHz/5GHz/6GHz support
+🔒 DNS over HTTPS - Cloudflared integration
+🛡️  WireGuard VPN - Secure tunnel support
+🔍 Suricata IDS/IPS - Threat detection
+🔄 WAN Failover - Automatic source switching
+📱 Telegram Alerts - Real-time notifications
+📊 SNMP Monitoring - Network management
+
+═══════════════════════════════════════════════════════════════════
+ SUPPORT
+═══════════════════════════════════════════════════════════════════
+
+Documentation: See PACKAGE_README.md for detailed information
+Issues: Report at GitHub repository
+Contact: admin@mdvsec.local
+
+═══════════════════════════════════════════════════════════════════

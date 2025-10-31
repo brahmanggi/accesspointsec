@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+# Colors for output
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+case "$1" in
+    remove|upgrade|deconfigure)
+        echo -e "${BLUE}MDVSEC: Preparing for removal...${NC}"
+
+        # Stop running services if they exist
+        for service in mdvsec-client-monitor mdvsec-failover hostapd dnsmasq; do
+            if systemctl is-active --quiet $service 2>/dev/null; then
+                echo -e "${YELLOW}Stopping $service...${NC}"
+                systemctl stop $service 2>/dev/null || true
+            fi
+        done
+
+        echo -e "${BLUE}Services stopped.${NC}"
+        ;;
+
+    failed-upgrade)
+        ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
