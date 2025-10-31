@@ -21,6 +21,21 @@
 
 ---
 
+## ⚠️ **IMPORTANT WARNING**
+
+> [!WARNING]
+> **This software is currently in BETA and considered UNSTABLE.**
+>
+> - 🚧 **Use at your own risk** - This software may contain bugs or unexpected behavior
+> - 🔬 **Testing phase** - Not recommended for production environments
+> - 💾 **Backup your data** - Always backup important configurations before use
+> - 🛡️ **Security considerations** - While security features are included, the software is still under development
+> - 📝 **Report issues** - Please report any bugs or issues on GitHub
+>
+> **USE THIS SOFTWARE CAREFULLY AND RESPONSIBLY**
+
+---
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
