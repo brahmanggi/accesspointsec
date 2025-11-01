@@ -59,6 +59,23 @@ sudo ./install.sh
 
 ---
 
+## 💡 Choose Your Version
+
+### 🚀 Full Version (This Page)
+**For systems with 1GB+ RAM**
+- All features including IDS/IPS
+- Multi-WAN support with failover
+- Best for production use
+
+### 💾 Lite Version
+**For low-resource systems (256MB+ RAM)**
+- Basic WiFi AP functionality
+- No Suricata, no failover
+- Perfect for Raspberry Pi Zero, old hardware
+- **[See LITE Version README →](README-LITE.md)**
+
+---
+
 ## 📋 What Does It Do?
 
 MDVSEC turns your Linux computer or Raspberry Pi into a secure WiFi Access Point with:
@@ -72,7 +89,18 @@ MDVSEC turns your Linux computer or Raspberry Pi into a secure WiFi Access Point
 
 ---
 
-## 💻 Supported Systems
+## 💻 System Requirements
+
+### Minimum Specifications
+
+| Component | Full Version | Lite Version |
+|-----------|-------------|--------------|
+| **CPU** | 1 GHz+ | 700 MHz+ |
+| **RAM** | 1 GB | 256 MB |
+| **Storage** | 100 MB | 50 MB |
+| **Network** | 1x Ethernet + 1x WiFi | Same |
+
+### Supported Systems
 
 Works on any Debian-based Linux:
 
