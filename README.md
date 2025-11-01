@@ -90,7 +90,7 @@
 
 ### Minimum Requirements
 - **OS**: Debian 10+ / Ubuntu 18.04+ / Raspberry Pi OS
-- **RAM**: 4 MB (16 GB recommended)
+- **RAM**: 4 GB (16 GB recommended)
 - **Storage**: 100 MB for software + dependencies
 - **Network**: At least one wireless interface supporting AP mode
 
